@@ -6,6 +6,7 @@ Project Semester
 - Rafif M R
 
 ## Sistem Informasi Lulusan STSN
+  Sebuah sistem informasi yang menyimpan, mengolah , mendistribusikan, dan menarik kesimpulan mengenai data dan informasi lulusan STSN
 ### Fitur - Fitur
 - Menampilkan Instansi Lulusan
 - Menampilkan Tingkat Kepuasan Kinerja Lulusan STSN
