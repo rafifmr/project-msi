@@ -13,11 +13,9 @@
     <!-- Bootstrap -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-
 </head>
 
 <body>
-    <!--happy code-->
     <!-- jQuery online menggunakan CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -30,7 +28,7 @@
     <!-- <script src="assets/custom.js"></script> -->
 
     <!-- Chart JS -->
-    <script type="text/javascript" src="chartjs/Chart.js"></script>
+    <script type="text/javascript" src="assets/chartjs/Chart.js"></script>
 
     <div class="container">
 
@@ -68,18 +66,14 @@
         // Get Data
         $data = json_decode(base64_decode($lsJSONRPCClient->export_responses($sessionKey, $survey_id, 'json')), true);
         $nilai = $data['responses'];
-        // Konek DB
-        //Ini untuk koneksi saja
+        // Konek Data
         $user_name = "root";
         $password  = "";
         $database  = "alumni";
         $host_name = "localhost";
 
-        // $connect_db = mysql_connect($host_name, $user_name, $password);
-        // $find_db = mysql_select_db($database, $connect_db);      
         $link = mysqli_connect($host_name, $user_name, $password, $database) or die(mysqli_error());
         //Akhir koneksi
-
         ?>
 
         <!-- Bagian Home -->
@@ -122,20 +116,16 @@
                                 <tbody>
                                     <tr>
                                         <?php
-                                        if (
-                                            $nilai[$i][(string) $i + 5]["II5"] != null &&
-                                            $nilai[$i][(string) $i + 5]["II5"] != "-"
-                                        ) { ?>
+                                        if ($nilai[$i][(string) $i + 5]["II5"] != null &&
+                                            $nilai[$i][(string) $i + 5]["II5"] != "-") { ?>
                                             <th>
                                                 <?php
-                                                echo $j;
-                                                $j++;
+                                                    echo $j;
+                                                    $j++;
                                                 ?>
                                             </th>
                                             <th>
-                                                <?php
-                                                echo $nilai[$i][(string) $i + 5]["II5"];
-                                                ?>
+                                                <?php echo $nilai[$i][(string) $i + 5]["II5"]; ?>
                                             </th>
                                         <?php
                                         } else {
