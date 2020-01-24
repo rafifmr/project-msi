@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2020 at 11:26 PM
+-- Generation Time: Jan 24, 2020 at 05:08 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -44,7 +44,33 @@ CREATE TABLE `nilai_kepuasan` (
 INSERT INTO `nilai_kepuasan` (`id`, `a1`, `a2`, `a3`, `a4`, `a5`) VALUES
 ('1', '0', '0', '1', '11', '13'),
 ('2', '0', '1', '2', '13', '9'),
+('3', '0', '0', '4', '12', '9'),
+('2', '0', '1', '2', '13', '9'),
 ('3', '0', '0', '4', '12', '9');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
+  `nama_user` varchar(45) NOT NULL,
+  `username_user` varchar(20) NOT NULL,
+  `password_user` varchar(32) NOT NULL,
+  `keterangan_user` text NOT NULL,
+  `status_user` enum('Admin','User','','') NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `nama_user`, `username_user`, `password_user`, `keterangan_user`, `status_user`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin', 'admin', 'admin di aplikasi', 'Admin', '2020-01-24 05:18:06', '2020-01-24 05:18:06');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
