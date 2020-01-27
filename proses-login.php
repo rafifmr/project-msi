@@ -2,9 +2,14 @@
 session_start();
 include('config/koneksi.php');
 
+$user     = $_POST['username_user'];
+$password = $_POST['password_user'];
+
+$hash_pass = md5($password);
+
 // ambil data
-$username_user = htmlspecialchars($_POST['username_user']);
-$password_user = htmlspecialchars($_POST['password_user']);
+$username_user = htmlspecialchars($user);
+$password_user = htmlspecialchars($hash_pass);
 
 // periksa username dan password
 $query = "SELECT * FROM user WHERE username_user = '$username_user' and password_user = '$password_user'";
