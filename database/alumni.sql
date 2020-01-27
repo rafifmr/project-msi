@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2020 at 05:08 AM
+-- Generation Time: Jan 27, 2020 at 11:30 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -70,7 +70,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `username_user`, `password_user`, `keterangan_user`, `status_user`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'admin', 'admin di aplikasi', 'Admin', '2020-01-24 05:18:06', '2020-01-24 05:18:06');
+(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin di aplikasi', 'Admin', '2020-01-24 05:18:06', '2020-01-24 05:18:06');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
